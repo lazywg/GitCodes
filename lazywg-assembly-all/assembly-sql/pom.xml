@@ -2,15 +2,39 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <parent>
-    <artifactId>lazywg-assembly-all</artifactId>
-    <groupId>com.lazywg.assembly</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>lazywg-assembly-all</artifactId>
+        <groupId>com.lazywg.assembly</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>assembly-sql</artifactId>
+    <artifactId>assembly-sql</artifactId>
 
-  <name>assembly-sql</name>
+    <name>assembly-sql</name>
+
+    <properties>
+        <mysql.version>5.1.26</mysql.version>
+        <sqlserver.version>4.0</sqlserver.version>
+        <oracle.version>11.2.0.4</oracle.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>${sqlserver.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.easyproject</groupId>
+            <artifactId>ojdbc5</artifactId>
+            <version>${oracle.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
