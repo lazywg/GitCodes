@@ -19,7 +19,7 @@ public final class AlgorithmUtil {
      * 输出：
      * 返回满足条件的区间个数
      */
-    public static int caclMaxHasDoubleMinRangeCount(int[] array) {
+    public static int maxMin(int[] array) {
         int count = 0, min = 0, max = 0;
         for (int i = 2; i <= array.length; i++) {
             for (int j = 0; j < (array.length - i + 1); j++) {
@@ -85,7 +85,7 @@ public final class AlgorithmUtil {
      * @param array
      * @return
      */
-    public static boolean Find(int target, int[][] array) {
+    public static boolean find(int target, int[][] array) {
         if (array == null || array.length == 0) {
             return false;
         }
